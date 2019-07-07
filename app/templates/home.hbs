@@ -1,0 +1,46 @@
+<div class="header">
+  <img src="/assets/rendia-logo.png" />
+  <h2>Recommends</h2>
+</div>
+
+{{#each model as |person|}}
+<div class="row">
+  <div class="rowHeader">
+    <img src={{person.image}} />
+    <h1>{{person.name}}</h1>
+  </div>
+  <div class="rowBody">
+    {{#each person.shows as |show|}}
+      <div class="posterContainer">
+        <div class="tooltip" >WHOA!!!!</div>
+        <div class="poster">
+          <img src={{show.poster}} />
+          {{!-- {{#attach-tooltip hideOn='mouseleave blur escapekey' showOn='mouseenter focus' position='top'}}
+            OPOPOPOPOPOPOPOPOPOPOPO
+            {{!-- <h3>{{show.title}}</h3>
+            <p>{{show.review}}</p> --}}
+          {{!-- {{/attach-tooltip}} --}}
+
+        </div>
+        <div class="link">
+          <a href={{show.link}} target="_blank">
+            {{#if (equals show.provider "netflix")}}
+              <img src="/assets/logos/netflix.png" />
+            {{/if}}
+            {{#if (equals show.provider "hulu")}}
+              <img src="/assets/logos/hulu.png" />
+            {{/if}}
+            {{#if (equals show.provider "amazon")}}
+              <img src="/assets/logos/amazon.png" />
+            {{/if}}
+            {{#if (equals show.provider "hbo")}}
+              <img src="/assets/logos/hbonow.png" />
+            {{/if}}
+          </a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+</div>
+{{/each}}

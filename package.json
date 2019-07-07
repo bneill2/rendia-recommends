@@ -2,9 +2,13 @@
   "name": "rendia-recommend",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for rendia-recommend goes here",
+  "description": "Internal tool for employee television recommendations",
   "license": "MIT",
   "author": "",
+  "contributors": {
+    "name": "Bryan Neill",
+    "email": "bryan@rendia.com"
+  },
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -12,6 +16,7 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
+    "clean": "npm cache clean && rm -rf node_modules dist tmp",
     "lint:js": "eslint .",
     "start": "ember serve",
     "test": "ember test"
@@ -19,6 +24,7 @@
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
+    "ember-attacher": "^0.13.10",
     "ember-cli": "~3.2.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.6.0",
@@ -28,6 +34,7 @@
     "ember-cli-htmlbars-inline-precompile": "^1.0.0",
     "ember-cli-inject-live-reload": "^1.4.1",
     "ember-cli-qunit": "^4.3.2",
+    "ember-cli-sass": "^8.0.1",
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
@@ -40,7 +47,8 @@
     "ember-welcome-page": "^3.0.0",
     "eslint-plugin-ember": "^5.0.0",
     "loader.js": "^4.2.3",
-    "qunit-dom": "^0.6.2"
+    "qunit-dom": "^0.6.2",
+    "sass": "^1.14.3"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
